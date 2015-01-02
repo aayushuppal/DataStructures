@@ -4,6 +4,7 @@ public class prob1 {
 	static char[] bChar = null;
 	static int count = 0;
 	static char temp = '0';
+	static int fin = 0;
 	
 	public static void main(String[] args) {
 	Scanner inputScan = new Scanner(System.in);
@@ -33,7 +34,7 @@ public class prob1 {
 			temp = '0';
 		}
 		if(temp == '1'){
-			System.out.println("repetition found");
+			fin = 0;
 			break;	
 		}
 		else {
@@ -42,12 +43,16 @@ public class prob1 {
 			String asd = Integer.toBinaryString(ty);
 			String asdn = new StringBuilder(new String(asd)).reverse().toString();
 			bChar = asdn.toCharArray();
+			fin = 1;
 		}
 	}
-	
-	
 	}
-	
+	if (fin == 0){
+		System.out.println("repetition found");
+	}
+	else{
+		System.out.println("no repetition found");
+	}
 	inputScan.close();
 	
 	}
