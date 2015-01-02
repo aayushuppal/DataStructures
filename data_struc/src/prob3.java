@@ -25,14 +25,29 @@ public class prob3{
 			return otpt;
 		}
 		else{
+			int[] letters1 = new int[256];  //because 256 ascii characters.
+			int[] letters2 = new int[256];  //because 256 ascii characters.
+			
 			char[] x = a.toCharArray();
 			char[] y = b.toCharArray();
 			
+			for (char c :  x)  {  // count number of each char in s.
+				letters1[c]++;
+				}
+			for (char c :  y)  {  // count number of each char in s.
+				letters2[c]++;
+				}
+			if (Arrays.equals(letters1, letters2)){
+				otpt = true;
+			}
+			
+			/*
 			Arrays.sort(x);
 			Arrays.sort(y);
 			if (Arrays.equals(x, y)){
 				otpt = true;
 			}
+			*/
 			return otpt;	
 		}	
 	}
