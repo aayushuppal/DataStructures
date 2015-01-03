@@ -1,4 +1,5 @@
-/*String compression problem*/
+/*String compression problem
+ time O(n) space O(n) solution */
 import java.util.Arrays;
 import java.util.Scanner;
 
