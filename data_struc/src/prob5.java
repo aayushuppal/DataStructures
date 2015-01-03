@@ -31,7 +31,7 @@ public class prob5 {
 				else{break;}
 			}
 			otp = otp +base+ct;
-			if (i != cArr.length-1){i--;}
+			if (cArr[cArr.length-1] != base){i--;}
 			 
 					
 		}
