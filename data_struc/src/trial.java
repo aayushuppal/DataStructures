@@ -17,9 +17,12 @@ public class trial {
 		ArrayList<Integer> narr = new ArrayList<Integer>();
 		narr.add(12);
 		System.out.println(narr.get(0));
-		*/
+		
 		char a = '\0';
 		System.out.println(a);
+		*/
+		StringBuffer mystr = new StringBuffer();
+		
 	}
 
 }	
