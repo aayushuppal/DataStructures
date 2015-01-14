@@ -9,9 +9,18 @@ public static void main(String[] args) {
 	pcll.addLast(10);
 	pcll.addLast(11);
 	pcll.addLast(10);
-	pcll.addLast(12);
+	pcll.addLast(12); 
 	
 	pcll.retString(head);
+	
+	/* if (last.next == head){
+		System.out.println("circular linked list");
+	}
+	else {
+		System.out.println("not a circular linked list");
+	} */
+	
+	
 	
 }
 
