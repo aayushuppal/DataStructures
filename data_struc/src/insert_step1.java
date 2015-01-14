@@ -8,20 +8,17 @@ public class insert_step1 {
     
     
 
-    public static void insertIntoSorted(int[] ar) {
-       int last = ar[ar.length - 1];
-       int i= ar.length-2;
-       while(i>=0 && ar[i] > last){
-    	   ar[i+1] = ar[i];
-    	   printArray(ar);
-    	   i--;
-       }
-       if(i==-1){
-    	   ar[0] = last;
-    	   printArray(ar);
-       }
-       if(i>=0 && ar[i]<=last){
-    	   ar[i+1]=last;
+    public static void insertionSortPart2(int[] ar) {
+       int max = ar.length-1;
+       for(int i=1; i<=max; i++){
+    	   int base = i;
+    	   while(i>0 && ar[i]<ar[i-1]){
+    		   int temp = ar[i-1];
+    		   ar[i-1] = ar[i];
+    		   ar[i] = temp;
+    		   i--;
+    	   }
+    	   i = base;
     	   printArray(ar);
        }
     }
@@ -36,7 +33,7 @@ public class insert_step1 {
             ar[i]=in.nextInt(); 
          }
          in.close();
-         insertIntoSorted(ar);
+         insertionSortPart2(ar);
     }
     
     
